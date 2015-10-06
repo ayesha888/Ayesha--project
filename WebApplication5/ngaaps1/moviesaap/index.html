@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="MoviesApp" >
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+    </style>
+</head>
+<body ng-controller="MoviesController as vm">
+    
+    <ul>
+
+        <li ng-repeat="pet in vm.pets" ng-cloak>
+            {{pet.type}}<ul><li ng-repeat="animal in pet.animals">{{animal.name}}<img ng-src="{{animal.src}}">            </li>
+            </ul>
+            </li>
+</ul>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="aaps.js"></script>
+    <script src="controlers.js"></script>
+</body>
+</html>
